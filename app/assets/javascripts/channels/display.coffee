@@ -7,6 +7,6 @@ App.display = App.cable.subscriptions.create "DisplayChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    #console.log("data message:" + data['message'] )
-    console.log("data message:" + data['time_stamp'] )
+    # console.log("data message:" + data['message'] )
+    # console.log("data message:" + data['time_stamp'] )
     $('#messages').append(data['message'] + data['time_stamp'])
