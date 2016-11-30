@@ -6,6 +6,9 @@ class BroadcastsController < ApplicationController
   # This is an admin specific controller, so enforce access by admin only
   # This is a very simple form of authorisation
   before_action :admin_required
+  
+  # Require date package to get timestamp
+  require 'date'
 
   # Default number of entries per page
   PER_PAGE = 12
@@ -63,8 +66,19 @@ class BroadcastsController < ApplicationController
         if no_errors
           format.html { redirect_to(broadcasts_url(page: @current_page)) }
           format.json { render json: @broadcast, status: :created, location: @broadcast }
+          
+          current_time = DateTime.now
+          my_timestamp = current_time.strftime "%d/%m/%Y %H:%M"
+          
           ActionCable.server.broadcast 'display_channel',
-            message: '<p>' + @broadcast.to_s + '</p>'
+            message: '<p>' + @broadcast.to_s + '</p>',
+            time_stamp: '<p>' + my_timestamp + '</p>'
+          #
+          #require 'date'
+          #current_time = DateTime.now
+          #current_time.strftime "%d/%m/%Y %H:%M"
+          # => "14/09/2011 17:02"
+          #
         else
           format.html { render action: 'new' }
           format.json {
