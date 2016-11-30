@@ -71,8 +71,8 @@ class BroadcastsController < ApplicationController
           my_timestamp = current_time.strftime "%d/%m/%Y %H:%M"
           
           ActionCable.server.broadcast 'display_channel',
-            message: '<p>' + @broadcast.content.to_s + '<br/>',
-            time_stamp: 'at: ' + my_timestamp + '</p>'
+            message: '<p>Broadcast: ' + @broadcast.content.to_s + '<br/>',
+            time_stamp: '@ ' + my_timestamp + '</p>'
 
         else
           format.html { render action: 'new' }
