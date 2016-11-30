@@ -15,14 +15,10 @@
  *= require bootstrap.css
  */
 
-.container.flex {
-    width: 100%;
-    display: flex;
-}
 /* page layout styles */
-
-h1 {
-  padding-top: 0;
+.container.flex {
+  width: 100%;
+  display: flex;
 }
 
 .content {
@@ -32,6 +28,10 @@ h1 {
 .side-pane {
   width: 40%;
   border: 1px solid black;
+}
+
+h1 {
+  padding-top: 0;
 }
 
 /* navbar stuff */
@@ -80,9 +80,28 @@ h1 {
 }
 
 .navigation a.here:visited {
-  colour: inherit;
+  color: inherit;
 }
 
 .flash_notice {
-    color: #fff;
+  color: #fff;
+}
+
+.flash_error {
+    color: #000;
+}
+
+/* pagination */
+.digg_pagination em.current {
+  background: #f05f40;
+  border: 1px solid #333;
+}
+
+.digg_pagination a {
+  color: #f05f40;
+  border: 1px solid #333;
+}
+
+.digg_pagination span.disabled {
+  border: 1px solid #333;
 }
