@@ -24096,3 +24096,3618 @@ Processing by Api::UsersController#index as JSON
 Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 0.6ms)
 
 
+Started POST "/broadcasts" for ::1 at 2016-11-30 00:32:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BroadcastsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jGKg4udPURFpoDS5cEKn+xiTQ6j0vfAni4ydnbYZwl1x1jsqd1G/qLDPw9Fe1vow5XviEWMD2VnLTuxb7tXGMg==", "page"=>"1", "broadcast"=>{"content"=>"kill me"}, "shorten_url"=>"http://killmepls.net", "commit"=>"Broadcast", "feeds"=>{"alumni_email"=>"cs-alumni", "email"=>"1", "facebook"=>"1", "RSS"=>"1", "atom"=>"1", "twitter"=>"1"}}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "kill me"], ["user_id", 41], ["created_at", 2016-11-30 00:32:18 UTC], ["updated_at", 2016-11-30 00:32:18 UTC]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (2.1ms)
+NewsBroadcast#send_news: processed outbound mail in 171.9ms
+Sent mail to cwl0@aber.ac.uk (6.2ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl0@aber.ac.uk
+Message-ID: <583e1e126c10a_172583fd163bc3d3c155d4@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname0,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 29.5ms
+Sent mail to cwl1@aber.ac.uk (2.7ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl1@aber.ac.uk
+Message-ID: <583e1e127465b_172583fd163bc3d3c15624@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname1,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 30.2ms
+Sent mail to cwl2@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl2@aber.ac.uk
+Message-ID: <583e1e127c8b6_172583fd163bc3d3c157b7@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname2,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 29.7ms
+Sent mail to cwl3@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl3@aber.ac.uk
+Message-ID: <583e1e128456e_172583fd163bc3d3c1581f@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname3,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 26.9ms
+Sent mail to cwl4@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl4@aber.ac.uk
+Message-ID: <583e1e128b728_172583fd163bc3d3c159e@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname4,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 20.6ms
+Sent mail to cwl5@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl5@aber.ac.uk
+Message-ID: <583e1e12910e5_172583fd163bc3d3c1602c@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname5,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.3ms
+Sent mail to cwl6@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl6@aber.ac.uk
+Message-ID: <583e1e1295d23_172583fd163bc3d3c16119@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname6,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.0ms
+Sent mail to cwl7@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl7@aber.ac.uk
+Message-ID: <583e1e129a804_172583fd163bc3d3c16237@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname7,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.4ms
+Sent mail to cwl8@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl8@aber.ac.uk
+Message-ID: <583e1e129f022_172583fd163bc3d3c163a6@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname8,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.0ms
+Sent mail to cwl9@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl9@aber.ac.uk
+Message-ID: <583e1e12a4251_172583fd163bc3d3c164d4@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname9,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.5ms
+Sent mail to cwl10@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl10@aber.ac.uk
+Message-ID: <583e1e12a8adc_172583fd163bc3d3c165e9@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname10,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.3ms
+Sent mail to cwl11@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl11@aber.ac.uk
+Message-ID: <583e1e12ad389_172583fd163bc3d3c166a0@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname11,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.3ms
+Sent mail to cwl12@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl12@aber.ac.uk
+Message-ID: <583e1e12b23b5_172583fd163bc3d3c16717@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname12,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.3ms
+Sent mail to cwl13@aber.ac.uk (1.4ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl13@aber.ac.uk
+Message-ID: <583e1e12b73e0_172583fd163bc3d3c16815@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname13,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.9ms
+Sent mail to cwl14@aber.ac.uk (2.2ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl14@aber.ac.uk
+Message-ID: <583e1e12bbe76_172583fd163bc3d3c169d7@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname14,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.8ms
+Sent mail to cwl15@aber.ac.uk (1.9ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl15@aber.ac.uk
+Message-ID: <583e1e12c11a3_172583fd163bc3d3c1705d@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname15,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.4ms
+Sent mail to cwl16@aber.ac.uk (2.2ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl16@aber.ac.uk
+Message-ID: <583e1e12c5c90_172583fd163bc3d3c171fc@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname16,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.0ms
+Sent mail to cwl17@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl17@aber.ac.uk
+Message-ID: <583e1e12caddd_172583fd163bc3d3c17237@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname17,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.3ms
+Sent mail to cwl18@aber.ac.uk (2.1ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl18@aber.ac.uk
+Message-ID: <583e1e12cf660_172583fd163bc3d3c17312@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname18,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.0ms
+Sent mail to cwl19@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl19@aber.ac.uk
+Message-ID: <583e1e12d4a4d_172583fd163bc3d3c174ad@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname19,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.2ms
+Sent mail to cwl20@aber.ac.uk (2.7ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl20@aber.ac.uk
+Message-ID: <583e1e12d926c_172583fd163bc3d3c1754e@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname20,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 17.5ms
+Sent mail to cwl21@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl21@aber.ac.uk
+Message-ID: <583e1e12de339_172583fd163bc3d3c176ce@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname21,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.0ms
+Sent mail to cwl22@aber.ac.uk (2.2ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl22@aber.ac.uk
+Message-ID: <583e1e12e2ab0_172583fd163bc3d3c17729@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname22,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.8ms
+Sent mail to cwl23@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl23@aber.ac.uk
+Message-ID: <583e1e12e8212_172583fd163bc3d3c17834@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname23,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.9ms
+Sent mail to cwl24@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl24@aber.ac.uk
+Message-ID: <583e1e12ed88a_172583fd163bc3d3c179f3@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname24,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.5ms
+Sent mail to cwl25@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:18 +0000
+From: admin@host.ac.com
+To: cwl25@aber.ac.uk
+Message-ID: <583e1e12f23fd_172583fd163bc3d3c1801c@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname25,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.2ms
+Sent mail to cwl26@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl26@aber.ac.uk
+Message-ID: <583e1e132947_172583fd163bc3d3c181b0@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname26,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.6ms
+Sent mail to cwl27@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl27@aber.ac.uk
+Message-ID: <583e1e137a20_172583fd163bc3d3c182da@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname27,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.4ms
+Sent mail to cwl28@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl28@aber.ac.uk
+Message-ID: <583e1e13cad4_172583fd163bc3d3c183d2@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname28,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.3ms
+Sent mail to cwl29@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl29@aber.ac.uk
+Message-ID: <583e1e1311b47_172583fd163bc3d3c1845c@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname29,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.8ms
+Sent mail to cwl30@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl30@aber.ac.uk
+Message-ID: <583e1e1316dc4_172583fd163bc3d3c185b7@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname30,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.7ms
+Sent mail to cwl31@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl31@aber.ac.uk
+Message-ID: <583e1e131b7e8_172583fd163bc3d3c1864b@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname31,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.0ms
+Sent mail to cwl32@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl32@aber.ac.uk
+Message-ID: <583e1e132028f_172583fd163bc3d3c187db@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname32,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.9ms
+Sent mail to cwl33@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl33@aber.ac.uk
+Message-ID: <583e1e1324c72_172583fd163bc3d3c188f9@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname33,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.5ms
+Sent mail to cwl34@aber.ac.uk (2.3ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl34@aber.ac.uk
+Message-ID: <583e1e1329627_172583fd163bc3d3c189b2@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname34,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.5ms
+Sent mail to cwl35@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl35@aber.ac.uk
+Message-ID: <583e1e132e0b3_172583fd163bc3d3c19083@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname35,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.2ms
+Sent mail to cwl36@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl36@aber.ac.uk
+Message-ID: <583e1e13333e3_172583fd163bc3d3c19175@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname36,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.4ms
+Sent mail to cwl37@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl37@aber.ac.uk
+Message-ID: <583e1e1337fad_172583fd163bc3d3c1924c@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname37,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.7ms
+Sent mail to cwl38@aber.ac.uk (2.2ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl38@aber.ac.uk
+Message-ID: <583e1e133c9eb_172583fd163bc3d3c1936f@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname38,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.5ms
+Sent mail to cwl39@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl39@aber.ac.uk
+Message-ID: <583e1e134208e_172583fd163bc3d3c194bd@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname39,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.7ms
+Sent mail to cwl@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:32:19 +0000
+From: admin@host.ac.com
+To: cwl@aber.ac.uk
+Message-ID: <583e1e1346de7_172583fd163bc3d3c195e0@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Chris,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+kill me
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT  "feeds".* FROM "feeds" WHERE "feeds"."name" = ? LIMIT ?[0m  [["name", "email"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "broadcasts_feeds" ("broadcast_id", "feed_id") VALUES (?, ?)[0m  [["broadcast_id", 10], ["feed_id", 3]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering broadcasts/new.html.erb within layouts/application
+  Rendered broadcasts/new.html.erb within layouts/application (12.5ms)
+Started GET "/cable" for ::1 at 2016-11-30 00:32:20 +0000
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.9ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 4370ms (Views: 2698.8ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:22 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "BroadcastChannel"
+Started GET "/cable" for ::1 at 2016-11-30 00:32:22 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:22 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DisplayChannel is transmitting the subscription confirmation
+DisplayChannel is streaming from display_channel
+Started PATCH "/broadcasts/10" for ::1 at 2016-11-30 00:32:28 +0000
+  
+ActionController::RoutingError (No route matches [PATCH] "/broadcasts/10"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered collection of /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (15.6ms)
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (116.9ms)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:29 +0000
+DisplayChannel stopped streaming from display_channel
+Started GET "/broadcasts/10" for ::1 at 2016-11-30 00:32:35 +0000
+Processing by BroadcastsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.1ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" WHERE "broadcasts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/show.html.erb within layouts/application
+  [1m[36mFeed Load (0.8ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  Rendered broadcasts/show.html.erb within layouts/application (13.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 122ms (Views: 115.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cable" for ::1 at 2016-11-30 00:32:35 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:35 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DisplayChannel is transmitting the subscription confirmation
+DisplayChannel is streaming from display_channel
+Started GET "/broadcasts" for ::1 at 2016-11-30 00:32:45 +0000
+Processing by BroadcastsController#index as HTML
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 9]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 8]]
+  [1m[36mFeed Load (0.3ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 7]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 6]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 5]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 4]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 3]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "broadcasts"[0m
+  Rendered broadcasts/index.html.erb within layouts/application (30.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 89.4ms | ActiveRecord: 2.5ms)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:45 +0000
+DisplayChannel stopped streaming from display_channel
+Started GET "/cable" for ::1 at 2016-11-30 00:32:45 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:45 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DisplayChannel is transmitting the subscription confirmation
+DisplayChannel is streaming from display_channel
+Started GET "/broadcasts?page=2" for ::1 at 2016-11-30 00:32:51 +0000
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 8]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 2]]
+  [1m[36mFeed Load (0.3ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 1]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 8]]
+  Rendered broadcasts/index.html.erb within layouts/application (11.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 67.0ms | ActiveRecord: 1.2ms)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:51 +0000
+DisplayChannel stopped streaming from display_channel
+Started GET "/cable" for ::1 at 2016-11-30 00:32:52 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:52 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DisplayChannel is transmitting the subscription confirmation
+DisplayChannel is streaming from display_channel
+Started GET "/broadcasts?page=1" for ::1 at 2016-11-30 00:32:53 +0000
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 9]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 8]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 7]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 6]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 5]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 4]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 3]]
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "broadcasts"[0m
+  Rendered broadcasts/index.html.erb within layouts/application (31.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 89.2ms | ActiveRecord: 2.4ms)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:53 +0000
+DisplayChannel stopped streaming from display_channel
+Started GET "/cable" for ::1 at 2016-11-30 00:32:54 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:32:54 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DisplayChannel is transmitting the subscription confirmation
+DisplayChannel is streaming from display_channel
+Started GET "/broadcasts/new?page=1" for ::1 at 2016-11-30 00:37:12 +0000
+Processing by BroadcastsController#new as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/new.html.erb within layouts/application
+  Rendered broadcasts/new.html.erb within layouts/application (5.5ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (3.0ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 77.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/cable" for ::1 at 2016-11-30 00:37:13 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:37:13 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DisplayChannel is transmitting the subscription confirmation
+DisplayChannel is streaming from display_channel
+Started GET "/cable" for ::1 at 2016-11-30 00:37:21 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:37:21 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "BroadcastChannel"
+Started GET "/cable" for ::1 at 2016-11-30 00:38:03 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:03 +0000
+Request origin not allowed: http://fiddle.jshell.net
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:03 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:38:08 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:08 +0000
+Request origin not allowed: http://fiddle.jshell.net
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:08 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:38:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:49 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:49 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:38:49 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:49 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:49 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:38:53 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:53 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:53 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:38:53 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:53 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:53 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:38:59 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:59 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:59 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:38:59 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:59 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:38:59 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:05 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:05 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/cable" for ::1 at 2016-11-30 00:39:06 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:06 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:06 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:06 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:06 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:06 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:07 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:07 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:07 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:09 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:09 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:09 +0000
+Started POST "/broadcasts" for ::1 at 2016-11-30 00:39:14 +0000
+Processing by BroadcastsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5XSKttivraMi/hEiu+UhiQ0ye+qBMETFfz6X/Y5IxP4YwBF+SLFDGvuR5kqVcXxC8NraUxaObbs//OY71oTAkQ==", "page"=>"1", "broadcast"=>{"content"=>"ijafbljdgsf"}, "shorten_url"=>"http://killmepls.net", "commit"=>"Broadcast", "feeds"=>{"alumni_email"=>"cs-alumni", "email"=>"1", "facebook"=>"1", "RSS"=>"1", "atom"=>"1", "twitter"=>"1"}}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "ijafbljdgsf"], ["user_id", 41], ["created_at", 2016-11-30 00:39:14 UTC], ["updated_at", 2016-11-30 00:39:14 UTC]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/cable" for ::1 at 2016-11-30 00:39:14 +0000
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:14 +0000
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (1.9ms)
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:14 +0000
+NewsBroadcast#send_news: processed outbound mail in 146.6ms
+Sent mail to cwl0@aber.ac.uk (5.3ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl0@aber.ac.uk
+Message-ID: <583e1fb2b5f2c_1740d3fd84e538020865ad@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname0,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.8ms)
+NewsBroadcast#send_news: processed outbound mail in 18.4ms
+Sent mail to cwl1@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl1@aber.ac.uk
+Message-ID: <583e1fb2bb4eb_1740d3fd84e538020866bc@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname1,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 21.9ms
+Sent mail to cwl2@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl2@aber.ac.uk
+Message-ID: <583e1fb2c1373_1740d3fd84e53802086791@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname2,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.9ms
+Sent mail to cwl3@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl3@aber.ac.uk
+Message-ID: <583e1fb2c69a8_1740d3fd84e53802086857@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname3,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.3ms)
+NewsBroadcast#send_news: processed outbound mail in 30.9ms
+Sent mail to cwl4@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl4@aber.ac.uk
+Message-ID: <583e1fb2cebb3_1740d3fd84e5380208696d@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname4,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 32.6ms
+Sent mail to cwl5@aber.ac.uk (3.2ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl5@aber.ac.uk
+Message-ID: <583e1fb2d766e_1740d3fd84e53802087040@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname5,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 41.7ms
+Sent mail to cwl6@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl6@aber.ac.uk
+Message-ID: <583e1fb2e28d0_1740d3fd84e538020871cd@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname6,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 36.1ms
+Sent mail to cwl7@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl7@aber.ac.uk
+Message-ID: <583e1fb2ebdc5_1740d3fd84e538020872b@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname7,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 26.7ms
+Sent mail to cwl8@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:14 +0000
+From: admin@host.ac.com
+To: cwl8@aber.ac.uk
+Message-ID: <583e1fb2f2ef4_1740d3fd84e53802087380@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname8,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 24.2ms
+Sent mail to cwl9@aber.ac.uk (2.9ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl9@aber.ac.uk
+Message-ID: <583e1fb35426_1740d3fd84e5380208742d@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname9,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 21.0ms
+Sent mail to cwl10@aber.ac.uk (2.5ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl10@aber.ac.uk
+Message-ID: <583e1fb3b9a3_1740d3fd84e53802087523@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname10,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.9ms
+Sent mail to cwl11@aber.ac.uk (2.0ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl11@aber.ac.uk
+Message-ID: <583e1fb310f37_1740d3fd84e538020876c8@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname11,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.8ms
+Sent mail to cwl12@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl12@aber.ac.uk
+Message-ID: <583e1fb3161cc_1740d3fd84e53802087781@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname12,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 19.8ms
+Sent mail to cwl13@aber.ac.uk (2.2ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl13@aber.ac.uk
+Message-ID: <583e1fb31b9f9_1740d3fd84e538020878bb@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname13,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 18.5ms
+Sent mail to cwl14@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl14@aber.ac.uk
+Message-ID: <583e1fb320c90_1740d3fd84e53802087951@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname14,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 17.5ms
+Sent mail to cwl15@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl15@aber.ac.uk
+Message-ID: <583e1fb325988_1740d3fd84e538020880cf@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname15,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 16.6ms
+Sent mail to cwl16@aber.ac.uk (1.4ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl16@aber.ac.uk
+Message-ID: <583e1fb32a32b_1740d3fd84e5380208815b@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname16,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.4ms
+Sent mail to cwl17@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl17@aber.ac.uk
+Message-ID: <583e1fb32f704_1740d3fd84e5380208823d@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname17,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.3ms
+Sent mail to cwl18@aber.ac.uk (1.9ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl18@aber.ac.uk
+Message-ID: <583e1fb334404_1740d3fd84e53802088372@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname18,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.2ms
+Sent mail to cwl19@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl19@aber.ac.uk
+Message-ID: <583e1fb339435_1740d3fd84e538020884a6@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname19,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 19.8ms
+Sent mail to cwl20@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl20@aber.ac.uk
+Message-ID: <583e1fb33e9d2_1740d3fd84e53802088518@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname20,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 19.3ms
+Sent mail to cwl21@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl21@aber.ac.uk
+Message-ID: <583e1fb343e07_1740d3fd84e5380208867e@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname21,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 19.1ms
+Sent mail to cwl22@aber.ac.uk (2.3ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl22@aber.ac.uk
+Message-ID: <583e1fb349259_1740d3fd84e538020887ad@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname22,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.1ms
+Sent mail to cwl23@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl23@aber.ac.uk
+Message-ID: <583e1fb34dfb7_1740d3fd84e53802088887@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname23,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.3ms
+Sent mail to cwl24@aber.ac.uk (1.4ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl24@aber.ac.uk
+Message-ID: <583e1fb3526e8_1740d3fd84e538020889d2@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname24,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.8ms
+Sent mail to cwl25@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl25@aber.ac.uk
+Message-ID: <583e1fb3574d6_1740d3fd84e538020890bb@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname25,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.9ms
+Sent mail to cwl26@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl26@aber.ac.uk
+Message-ID: <583e1fb35bfce_1740d3fd84e53802089141@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname26,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.4ms
+Sent mail to cwl27@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl27@aber.ac.uk
+Message-ID: <583e1fb360fbb_1740d3fd84e5380208929e@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname27,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.7ms
+Sent mail to cwl28@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl28@aber.ac.uk
+Message-ID: <583e1fb3662ab_1740d3fd84e53802089383@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname28,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.4ms
+Sent mail to cwl29@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl29@aber.ac.uk
+Message-ID: <583e1fb36b36b_1740d3fd84e5380208947e@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname29,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.3ms
+Sent mail to cwl30@aber.ac.uk (2.3ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl30@aber.ac.uk
+Message-ID: <583e1fb36fc08_1740d3fd84e53802089513@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname30,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+Started GET "/cable" for ::1 at 2016-11-30 00:39:15 +0000
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:15 +0000
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+Request origin not allowed: http://localhost:3000
+NewsBroadcast#send_news: processed outbound mail in 23.4ms
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Sent mail to cwl31@aber.ac.uk (1.5ms)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:15 +0000
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl31@aber.ac.uk
+Message-ID: <583e1fb37628d_1740d3fd84e538020896ef@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname31,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (1.0ms)
+NewsBroadcast#send_news: processed outbound mail in 24.6ms
+Sent mail to cwl32@aber.ac.uk (3.1ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl32@aber.ac.uk
+Message-ID: <583e1fb37cedf_1740d3fd84e53802089756@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname32,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.4ms
+Sent mail to cwl33@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl33@aber.ac.uk
+Message-ID: <583e1fb382401_1740d3fd84e538020898c5@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname33,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.7ms)
+NewsBroadcast#send_news: processed outbound mail in 20.4ms
+Sent mail to cwl34@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl34@aber.ac.uk
+Message-ID: <583e1fb387c57_1740d3fd84e53802089959@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname34,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.1ms
+Sent mail to cwl35@aber.ac.uk (2.3ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl35@aber.ac.uk
+Message-ID: <583e1fb38ccd3_1740d3fd84e53802090085@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname35,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.6ms
+Sent mail to cwl36@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl36@aber.ac.uk
+Message-ID: <583e1fb391fd0_1740d3fd84e538020901cf@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname36,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.7ms
+Sent mail to cwl37@aber.ac.uk (2.2ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl37@aber.ac.uk
+Message-ID: <583e1fb396a7d_1740d3fd84e538020902b0@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname37,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.6ms
+Sent mail to cwl38@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl38@aber.ac.uk
+Message-ID: <583e1fb39b9be_1740d3fd84e538020903fc@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname38,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.5ms
+Sent mail to cwl39@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl39@aber.ac.uk
+Message-ID: <583e1fb3a0310_1740d3fd84e53802090458@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname39,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 21.0ms
+Sent mail to cwl@aber.ac.uk (2.4ms)
+Date: Wed, 30 Nov 2016 00:39:15 +0000
+From: admin@host.ac.com
+To: cwl@aber.ac.uk
+Message-ID: <583e1fb3a5e22_1740d3fd84e53802090520@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Chris,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+ijafbljdgsf
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT  "feeds".* FROM "feeds" WHERE "feeds"."name" = ? LIMIT ?[0m  [["name", "email"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "broadcasts_feeds" ("broadcast_id", "feed_id") VALUES (?, ?)[0m  [["broadcast_id", 11], ["feed_id", 3]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT  "feeds".* FROM "feeds" WHERE "feeds"."name" = ? LIMIT ?[0m  [["name", "twitter"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "broadcasts_feeds" ("broadcast_id", "feed_id") VALUES (?, ?)[0m  [["broadcast_id", 11], ["feed_id", 1]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/broadcasts?page=1
+Completed 302 Found in 1607ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/broadcasts?page=1" for ::1 at 2016-11-30 00:39:16 +0000
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.3ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 11]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  [1m[36mFeed Load (0.4ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 9]]
+  [1m[36mFeed Load (0.3ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 8]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 7]]
+  [1m[36mFeed Load (0.4ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 6]]
+  [1m[36mFeed Load (0.4ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 5]]
+  [1m[36mFeed Load (0.5ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 4]]
+  [1m[36mBroadcast Load (1.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "broadcasts"[0m
+  Rendered broadcasts/index.html.erb within layouts/application (357.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (3.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 644ms (Views: 634.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/cable" for ::1 at 2016-11-30 00:39:16 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:16 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:16 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:24 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:24 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:24 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:24 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:24 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:24 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:28 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:28 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:28 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:34 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:34 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:34 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:34 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:34 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:34 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:35 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:35 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:35 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:36 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:36 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:36 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:41 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:41 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:41 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:45 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:45 +0000
+Request origin not allowed: http://localhost:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:45 +0000
+Started GET "/cable" for ::1 at 2016-11-30 00:39:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:56 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "BroadcastChannel"
+Started GET "/cable" for ::1 at 2016-11-30 00:39:59 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 00:39:59 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DisplayChannel is transmitting the subscription confirmation
+DisplayChannel is streaming from display_channel
