@@ -1,5 +1,4 @@
 class BroadcastsController < ApplicationController
-
   before_action :set_broadcast, only: [:show, :destroy]
   before_action :set_current_page, except: [:index]
   rescue_from ActiveRecord::RecordNotFound, with: :squelch_record_not_found
