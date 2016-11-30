@@ -29703,3 +29703,61 @@ Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 01:24:31 +0000
 Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
 DisplayChannel is transmitting the subscription confirmation
 DisplayChannel is streaming from display_channel
+Started GET "/cable" for ::1 at 2016-11-30 01:34:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 01:34:48 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "BroadcastChannel"
+Started GET "/cable" for ::1 at 2016-11-30 01:34:50 +0000
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 01:34:50 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DisplayChannel is transmitting the subscription confirmation
+DisplayChannel is streaming from display_channel
+Started GET "/" for ::1 at 2016-11-30 01:34:51 +0000
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+DisplayChannel transmitting {"message"=>"<p>kill me</p>"} (via streamed from display_channel)
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (17.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 711ms (Views: 689.2ms | ActiveRecord: 1.0ms)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 01:34:52 +0000
+DisplayChannel stopped streaming from display_channel
+Started GET "/" for ::1 at 2016-11-30 01:35:09 +0000
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 89.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-30 01:35:37 +0000
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 0.2ms)
+
+
