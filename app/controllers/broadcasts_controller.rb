@@ -21,6 +21,7 @@ class BroadcastsController < ApplicationController
   # GET /broadcasts/1
   # GET /broadcasts/1.json
   def show
+    
   end
 
   # GET /broadcasts/new
@@ -49,6 +50,9 @@ class BroadcastsController < ApplicationController
         # Only after saving do we try and do the real broadcast. Could have been
         # done using an observer, but I wanted this to be more explicit
 
+        ActionCable.server.broadcast 'display_channel',
+        message: '<p>' + @broadcast.to_s + '</p>'
+        
         results = BroadcastService.broadcast(@broadcast, params[:feeds])
         if results.length > 0
           # Something went wrong when trying to broadcast to one or more of the
