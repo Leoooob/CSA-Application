@@ -50,8 +50,8 @@ class BroadcastsController < ApplicationController
         # Only after saving do we try and do the real broadcast. Could have been
         # done using an observer, but I wanted this to be more explicit
 
-        ActionCable.server.broadcast 'display_channel',
-        message: '<p>' + @broadcast.to_s + '</p>'
+        #ActionCable.server.broadcast 'display_channel',
+        #  message: '<p>' + @broadcast.to_s + '</p>'
         
         results = BroadcastService.broadcast(@broadcast, params[:feeds])
         if results.length > 0
@@ -66,6 +66,8 @@ class BroadcastsController < ApplicationController
         if no_errors
           format.html { redirect_to(broadcasts_url(page: @current_page)) }
           format.json { render json: @broadcast, status: :created, location: @broadcast }
+          ActionCable.server.broadcast 'display_channel',
+            message: '<p>' + @broadcast.to_s + '</p>'
         else
           format.html { render action: 'new' }
           format.json {
