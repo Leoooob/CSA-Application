@@ -14,7 +14,7 @@ User.transaction do
                       firstname: 'Leon',
                       email: 'leh28@aber.ac.uk',
                       phone: '07988967026',
-                      grad_year: 2017)
+                      grad_year: 2016)
   UserDetail.create!(login: 'admin',
                      password: 'taliesin',
                      user: user)
