@@ -32,7 +32,6 @@ class BroadcastsController < ApplicationController
   # POST /broadcasts
   # POST /broadcasts.json
   def create
-
     @broadcast = Broadcast.new(broadcast_params)
 
     # Wire up broadcast with the current user (an administrator)
@@ -48,7 +47,6 @@ class BroadcastsController < ApplicationController
     no_errors = false
     respond_to do |format|
       if @broadcast.save
-
         # Only after saving do we try and do the real broadcast. Could have been
         # done using an observer, but I wanted this to be more explicit
 
