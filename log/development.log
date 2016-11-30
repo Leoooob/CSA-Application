@@ -31467,3 +31467,1984 @@ Processing by BroadcastsController#index as HTML
 Completed 200 OK in 96ms (Views: 89.9ms | ActiveRecord: 2.4ms)
 
 
+Started GET "/" for ::1 at 2016-11-30 01:46:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (27.3ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 733ms (Views: 702.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/broadcasts?page=1" for ::1 at 2016-11-30 01:46:39 +0000
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 13]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 12]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 11]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 9]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 8]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 7]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 6]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "broadcasts"[0m
+  Rendered broadcasts/index.html.erb within layouts/application (62.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 117.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/broadcasts/new?page=1" for ::1 at 2016-11-30 01:46:41 +0000
+Processing by BroadcastsController#new as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/new.html.erb within layouts/application
+  Rendered broadcasts/new.html.erb within layouts/application (7.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/broadcasts" for ::1 at 2016-11-30 01:46:52 +0000
+Processing by BroadcastsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QlcFVmxyCoNZ2K9Gv++hKR8tNElZLq02WbLHBYtZnie/456e/GzkOoC3WC6Re/zi4sWV8M6QhEgZcLbD05WaSA==", "page"=>"1", "broadcast"=>{"content"=>"can you please broadcast this to the homepage pls"}, "shorten_url"=>"http://myurl.com", "commit"=>"Broadcast", "feeds"=>{"alumni_email"=>"cs-alumni", "email"=>"1", "facebook"=>"1", "RSS"=>"1", "atom"=>"1", "twitter"=>"1"}}
+  [1m[36mUserDetail Load (0.6ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "can you please broadcast this to the homepage pls"], ["user_id", 41], ["created_at", 2016-11-30 01:46:52 UTC], ["updated_at", 2016-11-30 01:46:52 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>id: 14 content: can you please broadcast this to the homepage pls user: 41</p>"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (1.2ms)
+NewsBroadcast#send_news: processed outbound mail in 140.5ms
+Sent mail to cwl0@aber.ac.uk (5.3ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl0@aber.ac.uk
+Message-ID: <583e2f8d326fb_185383fca182de27825741@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname0,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.6ms
+Sent mail to cwl1@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl1@aber.ac.uk
+Message-ID: <583e2f8d37e4e_185383fca182de278258aa@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname1,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 17.6ms
+Sent mail to cwl2@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl2@aber.ac.uk
+Message-ID: <583e2f8d3cc5f_185383fca182de27825936@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname2,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 15.4ms
+Sent mail to cwl3@aber.ac.uk (2.0ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl3@aber.ac.uk
+Message-ID: <583e2f8d411b1_185383fca182de27826089@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname3,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.5ms
+Sent mail to cwl4@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl4@aber.ac.uk
+Message-ID: <583e2f8d45d14_185383fca182de27826168@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname4,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 19.1ms
+Sent mail to cwl5@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl5@aber.ac.uk
+Message-ID: <583e2f8d4b07f_185383fca182de278262f2@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname5,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.0ms
+Sent mail to cwl6@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl6@aber.ac.uk
+Message-ID: <583e2f8d50080_185383fca182de2782636b@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname6,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.6ms
+Sent mail to cwl7@aber.ac.uk (2.7ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl7@aber.ac.uk
+Message-ID: <583e2f8d54be6_185383fca182de2782646d@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname7,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 20.8ms
+Sent mail to cwl8@aber.ac.uk (1.9ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl8@aber.ac.uk
+Message-ID: <583e2f8d5aa1d_185383fca182de27826566@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname8,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.9ms
+Sent mail to cwl9@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl9@aber.ac.uk
+Message-ID: <583e2f8d5fe71_185383fca182de278266bb@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname9,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.9ms
+Sent mail to cwl10@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl10@aber.ac.uk
+Message-ID: <583e2f8d649b4_185383fca182de278267c7@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname10,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 15.8ms
+Sent mail to cwl11@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl11@aber.ac.uk
+Message-ID: <583e2f8d69033_185383fca182de278268ac@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname11,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 19.7ms
+Sent mail to cwl12@aber.ac.uk (2.0ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl12@aber.ac.uk
+Message-ID: <583e2f8d6e69b_185383fca182de278269e9@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname12,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 20.0ms
+Sent mail to cwl13@aber.ac.uk (2.0ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl13@aber.ac.uk
+Message-ID: <583e2f8d73dc2_185383fca182de278270b9@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname13,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 17.4ms
+Sent mail to cwl14@aber.ac.uk (2.3ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl14@aber.ac.uk
+Message-ID: <583e2f8d78d1b_185383fca182de27827116@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname14,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 21.3ms
+Sent mail to cwl15@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl15@aber.ac.uk
+Message-ID: <583e2f8d7eb13_185383fca182de27827222@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname15,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.2ms
+Sent mail to cwl16@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl16@aber.ac.uk
+Message-ID: <583e2f8d8370e_185383fca182de278273f2@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname16,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.1ms
+Sent mail to cwl17@aber.ac.uk (2.2ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl17@aber.ac.uk
+Message-ID: <583e2f8d8870d_185383fca182de2782745e@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname17,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.3ms)
+NewsBroadcast#send_news: processed outbound mail in 17.7ms
+Sent mail to cwl18@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl18@aber.ac.uk
+Message-ID: <583e2f8d8d6a9_185383fca182de27827549@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname18,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.0ms
+Sent mail to cwl19@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl19@aber.ac.uk
+Message-ID: <583e2f8d91e61_185383fca182de27827675@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname19,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.9ms
+Sent mail to cwl20@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl20@aber.ac.uk
+Message-ID: <583e2f8d968ca_185383fca182de2782774c@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname20,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 15.4ms
+Sent mail to cwl21@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl21@aber.ac.uk
+Message-ID: <583e2f8d9ae11_185383fca182de278278ad@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname21,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.7ms)
+NewsBroadcast#send_news: processed outbound mail in 17.0ms
+Sent mail to cwl22@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl22@aber.ac.uk
+Message-ID: <583e2f8d9f9db_185383fca182de2782796c@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname22,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 20.2ms
+Sent mail to cwl23@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl23@aber.ac.uk
+Message-ID: <583e2f8da51ff_185383fca182de278280b7@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname23,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 17.2ms
+Sent mail to cwl24@aber.ac.uk (2.4ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl24@aber.ac.uk
+Message-ID: <583e2f8da9f63_185383fca182de278281dd@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname24,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 18.4ms
+Sent mail to cwl25@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl25@aber.ac.uk
+Message-ID: <583e2f8daf360_185383fca182de278282eb@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname25,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.3ms
+Sent mail to cwl26@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl26@aber.ac.uk
+Message-ID: <583e2f8db3be6_185383fca182de2782835@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname26,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.4ms
+Sent mail to cwl27@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl27@aber.ac.uk
+Message-ID: <583e2f8db87ff_185383fca182de2782842f@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname27,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.9ms
+Sent mail to cwl28@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl28@aber.ac.uk
+Message-ID: <583e2f8dbd308_185383fca182de278285f@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname28,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.1ms
+Sent mail to cwl29@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl29@aber.ac.uk
+Message-ID: <583e2f8dc225b_185383fca182de27828687@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname29,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 19.6ms
+Sent mail to cwl30@aber.ac.uk (2.8ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl30@aber.ac.uk
+Message-ID: <583e2f8dc7a4b_185383fca182de2782875d@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname30,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.6ms
+Sent mail to cwl31@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl31@aber.ac.uk
+Message-ID: <583e2f8dccaa0_185383fca182de27828829@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname31,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 17.0ms
+Sent mail to cwl32@aber.ac.uk (1.9ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl32@aber.ac.uk
+Message-ID: <583e2f8dd1610_185383fca182de278289fd@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname32,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.4ms
+Sent mail to cwl33@aber.ac.uk (2.4ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl33@aber.ac.uk
+Message-ID: <583e2f8dd60de_185383fca182de278290de@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname33,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 17.8ms
+Sent mail to cwl34@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl34@aber.ac.uk
+Message-ID: <583e2f8ddb178_185383fca182de278291e4@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname34,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.0ms
+Sent mail to cwl35@aber.ac.uk (1.5ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl35@aber.ac.uk
+Message-ID: <583e2f8ddf8de_185383fca182de27829277@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname35,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.3ms
+Sent mail to cwl36@aber.ac.uk (1.6ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl36@aber.ac.uk
+Message-ID: <583e2f8de4130_185383fca182de278293de@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname36,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 16.0ms
+Sent mail to cwl37@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl37@aber.ac.uk
+Message-ID: <583e2f8de892d_185383fca182de2782943e@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname37,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.4ms)
+NewsBroadcast#send_news: processed outbound mail in 18.6ms
+Sent mail to cwl38@aber.ac.uk (1.7ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl38@aber.ac.uk
+Message-ID: <583e2f8dedac1_185383fca182de278295a6@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname38,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.5ms)
+NewsBroadcast#send_news: processed outbound mail in 16.4ms
+Sent mail to cwl39@aber.ac.uk (2.4ms)
+Date: Wed, 30 Nov 2016 01:46:53 +0000
+From: admin@host.ac.com
+To: cwl39@aber.ac.uk
+Message-ID: <583e2f8df2469_185383fca182de278296d5@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Firstname39,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  Rendering news_broadcast/send_news.html.erb within layouts/mailer
+  Rendered news_broadcast/send_news.html.erb within layouts/mailer (0.6ms)
+NewsBroadcast#send_news: processed outbound mail in 17.4ms
+Sent mail to cwl@aber.ac.uk (1.8ms)
+Date: Wed, 30 Nov 2016 01:46:54 +0000
+From: admin@host.ac.com
+To: cwl@aber.ac.uk
+Message-ID: <583e2f8e3193_185383fca182de278297ea@Leons-MBP.mail>
+Subject: Aber CS cs-alumni News
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Chris,
+<p>
+Here is some news from Computer Science, Aberystwyth University:
+</p>
+can you please broadcast this to the homepage pls
+<p>
+Best Wishes,
+</p>
+<p>
+CS-Dept Admin Team
+</p>
+
+  </body>
+</html>
+
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT  "feeds".* FROM "feeds" WHERE "feeds"."name" = ? LIMIT ?[0m  [["name", "email"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "broadcasts_feeds" ("broadcast_id", "feed_id") VALUES (?, ?)[0m  [["broadcast_id", 14], ["feed_id", 3]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT  "feeds".* FROM "feeds" WHERE "feeds"."name" = ? LIMIT ?[0m  [["name", "twitter"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "broadcasts_feeds" ("broadcast_id", "feed_id") VALUES (?, ?)[0m  [["broadcast_id", 14], ["feed_id", 1]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/broadcasts?page=1
+Completed 302 Found in 1491ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/broadcasts?page=1" for ::1 at 2016-11-30 01:46:54 +0000
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 14]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 13]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 12]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 11]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 9]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 8]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 7]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "broadcasts"[0m
+  Rendered broadcasts/index.html.erb within layouts/application (29.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 84.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/broadcasts?page=1" for ::1 at 2016-11-30 01:48:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.5ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 14]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 13]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 12]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 11]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 9]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 8]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 7]]
+  [1m[36mBroadcast Load (0.4ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "broadcasts"[0m
+  Rendered broadcasts/index.html.erb within layouts/application (1018.9ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.7ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 1532ms (Views: 1470.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-30 01:48:22 +0000
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 186ms (Views: 163.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/broadcasts?page=1" for ::1 at 2016-11-30 01:50:35 +0000
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 14]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 13]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 12]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 11]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  [1m[36mFeed Load (0.3ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 9]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 8]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 7]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "broadcasts"[0m
+  Rendered broadcasts/index.html.erb within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:10:15: reserved word 'function'):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9: </head>
+    10: <body id="<%= params[:controller].parameterize %>_controller">
+    11: 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1385941718692034274_70305064468240'
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.2ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/leon/.rvm/gems/ruby-2.3.1/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/broadcasts?page=1" for ::1 at 2016-11-30 01:50:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.4ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.3ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 14]]
+  Rendered broadcasts/index.html.erb within layouts/application (594.9ms)
+Completed 500 Internal Server Error in 655ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:10:15: reserved word 'function'):
+    19:               <%= display_feeds broadcast %>
+    20:             </td>
+    21: 
+    22:             <td><%= link_to image_tag('eye.jpg', alt: 'Show',
+    23:                                       title: 'Show details', border: '0'),
+    24:                             broadcast_path(broadcast, page: @broadcasts.current_page) %></td>
+    25:             <td><%= link_to image_tag('destroy.gif', alt: 'Destroy',
+  
+app/views/broadcasts/index.html.erb:22:in `block in _app_views_broadcasts_index_html_erb___2605957686272390593_70258504717120'
+app/views/broadcasts/index.html.erb:15:in `_app_views_broadcasts_index_html_erb___2605957686272390593_70258504717120'
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.5ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/leon/.rvm/gems/ruby-2.3.1/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/broadcasts?page=1" for ::1 at 2016-11-30 01:52:15 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BroadcastsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering broadcasts/index.html.erb within layouts/application
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 14]]
+  [1m[36mFeed Load (0.4ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 13]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 12]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 11]]
+  [1m[36mFeed Load (0.2ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 10]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 9]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 8]]
+  [1m[36mFeed Load (0.1ms)[0m  [1m[34mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 7]]
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "broadcasts"[0m
+  Rendered broadcasts/index.html.erb within layouts/application (847.7ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (2.1ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 1185ms (Views: 1128.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2016-11-30 01:52:20 +0000
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-30 01:52:22 +0000
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-30 01:53:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (22.6ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 1282ms (Views: 1251.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-30 01:56:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 671ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:18:13: reserved word 'function'):
+    4:   <title>CSA Application</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: </head>
+   10: <body id="<%= params[:controller].parameterize %>_controller">
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___2450844449907974883_70266244208520'
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/leon/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.2ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/leon/.rvm/gems/ruby-2.3.1/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/cable" for ::1 at 2016-11-30 01:59:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-30 01:59:34 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "ClockChannel"
+Subscription class not found: "ClockChannel"
+Started GET "/" for ::1 at 2016-11-30 01:59:35 +0000
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (18.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 1063ms (Views: 1037.4ms | ActiveRecord: 1.0ms)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2016-11-30 01:59:36 +0000
+Started GET "/" for ::1 at 2016-11-30 02:02:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+[ActionCable] Broadcasting to display_channel: {:message=>"<p>kill me</p>"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (16.6ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+Completed 200 OK in 1118ms (Views: 1088.6ms | ActiveRecord: 1.1ms)
+
+
