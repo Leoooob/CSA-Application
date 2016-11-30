@@ -14,3 +14,75 @@
  *= require jquery-ui/autocomplete
  *= require bootstrap.css
  */
+
+.container.flex {
+    width: 100%;
+    display: flex;
+}
+/* page layout styles */
+
+h1 {
+  padding-top: 0;
+}
+
+.content {
+  width: 60%;
+}
+
+.side-pane {
+  width: 40%;
+  border: 1px solid black;
+}
+
+/* navbar stuff */
+.login-form {
+  padding-top: 5px;
+}
+
+.login-form p {
+  color: #000;
+}
+
+.login-form form {
+  padding-top: 0;
+  padding-left: 20px;
+}
+
+.register {
+  color: #333;
+}
+
+.register p {
+  margin: 0;
+  color: #000;
+}
+
+.register a {
+  color: #333;
+}
+
+.header {
+  background-color: #f05f40;
+}
+
+.navigation .selected {
+  color: #333;
+  background: none;
+  border-radius: 3px;
+}
+
+.navigation a {
+  color: #fff;
+}
+
+.navigation a:hover, .navigation a:focus, .navigation a:active, .navigation a.here:link{
+  color: #333;
+}
+
+.navigation a.here:visited {
+  colour: inherit;
+}
+
+.flash_notice {
+    color: #fff;
+}
