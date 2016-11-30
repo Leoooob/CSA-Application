@@ -2,7 +2,7 @@
 
 require_relative 'config/environment'
 
-# remove when done with jsfiddle
-# ActionCable.server.config.allowed_request_origins = ['http://fiddle.jshell.net']
+# allowed websocket request origins
+ActionCable.server.config.allowed_request_origins = ['http://localhost:300', 'https://csa-application.herokuapp.com']
 
 run Rails.application
