@@ -30,6 +30,14 @@
   border: 1px solid black;
 }
 
+.side-pane #messages {
+  margin: 0 5px;
+}
+
+.side-pane h2 {
+  margin: 5px;
+}
+
 h1 {
   padding-top: 0;
 }

@@ -71,7 +71,7 @@ class BroadcastsController < ApplicationController
           my_timestamp = current_time.strftime "%d/%m/%Y %H:%M"
           
           ActionCable.server.broadcast 'display_channel',
-            message: '<p>' + @broadcast.to_s + '</p>',
+            message: '<p>' + @broadcast.content.to_s + '</p>',
             time_stamp: '<p>' + my_timestamp + '</p>'
           #
           #require 'date'
