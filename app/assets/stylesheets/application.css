@@ -36,6 +36,7 @@
 
 .side-pane h2 {
   margin: 5px;
+  border-bottom: 1px solid #f05f40;
 }
 
 h1 {
