@@ -1,5 +1,4 @@
 class BroadcastService
-
   # The content in the broadcast object will be broadcast to each feed in
   # the feeds hash. Any communication failures will be flagged with an
   # error message in the value of the corresponding feed in the feeds hash
