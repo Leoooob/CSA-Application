@@ -18,15 +18,15 @@
     <div id="broadcast-area" class="main-input-area">
       <p>
         <%= f.text_area :content, rows: "10",
-                        title: "Broadcast text goes here", autofocus: 'autofocus' %>
+                        placeholder: "Broadcast text goes here", autofocus: 'autofocus' %>
       </p>
 
       <div id="url-part">
         <%= link_to("Shortens URL",
                     id: "split-arrow",
-                    title: "Press this to shorten the URL") %>
+                    desc: "Press this to shorten the URL") %>
         <%= text_field_tag :shorten_url, nil,
-                           title: "Enter URL that you wish to shorten",
+                           placeholder: "Enter URL that you wish to shorten",
                            size: "50%" %>
 
       </div>
