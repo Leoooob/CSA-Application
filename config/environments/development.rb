@@ -78,6 +78,6 @@ Rails.application.configure do
   #    port: 25
   #}
 
-  ADMIN_EMAIL="admin@host.ac.com" # Change to your email
+  ADMIN_EMAIL = "admin@host.ac.com" # Change to your email
 
 end
