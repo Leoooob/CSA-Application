@@ -62,7 +62,8 @@ end
 
 # Production only gems, pg is not included here
 group :production do
-  gem 'sendgrid-ruby'
+  # sendgrid not currently included because I am spoofing emails in production AND development
+  # gem 'sendgrid-ruby'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
