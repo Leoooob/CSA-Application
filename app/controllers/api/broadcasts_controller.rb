@@ -1,4 +1,4 @@
-class BroadcastsController < ApplicationController
+class Api::BroadcastsController < Api::ApplicationController
   before_action :set_broadcast, only: [:show, :destroy]
   before_action :set_current_page, except: [:index]
   rescue_from ActiveRecord::RecordNotFound, with: :squelch_record_not_found
@@ -11,26 +11,21 @@ class BroadcastsController < ApplicationController
   require 'date'
 
   # Default number of entries per page
-  PER_PAGE = 12
+  PER_PAGE = 20
 
-  # GET /broadcasts
+  # GET /broadcasts.json
   def index
     @broadcasts = Broadcast.paginate(page: params[:page],
                                      per_page: params[:per_page])
                            .order('created_at DESC')
   end
 
-  # GET /broadcasts/1
+  # GET /broadcasts/1.json
   def show
     
   end
 
-  # GET /broadcasts/new
-  def new
-    @broadcast = Broadcast.new
-  end
-
-  # POST /broadcasts
+  # POST /broadcasts.json
   def create
     @broadcast = Broadcast.new(broadcast_params)
 
@@ -61,7 +56,7 @@ class BroadcastsController < ApplicationController
           no_errors = true
         end
         if no_errors
-          format.html { redirect_to(broadcasts_url(page: @current_page)) }
+          format.json { render json: @broadcast, status: :created, location: @broadcast }
           
           current_time = DateTime.now
           my_timestamp = current_time.strftime "%d/%m/%Y %H:%M"
@@ -71,17 +66,25 @@ class BroadcastsController < ApplicationController
             time_stamp: '@ ' + my_timestamp + '</p>'
 
         else
-          format.html { render action: 'new' }
+          format.json {
+            # Either say it partly worked but send back the errors or else send
+            # back complete failure indicator (couldn't even save)
+            if results
+              render json: @broadcast.errors, status: :created, location: @broadcast
+            else
+              render json: @broadcast.errors, status: :unprocessable_entity
+            end
+          }
         end
       end
     end
   end
 
-  # DELETE /broadcasts/1
+  # DELETE /broadcasts/1.json
   def destroy
     @broadcast.destroy
     respond_to do |format|
-      format.html { redirect_to broadcasts_url }
+      format.json { head :no_content }
     end
   end
 
@@ -102,7 +105,7 @@ class BroadcastsController < ApplicationController
 
   def squelch_record_not_found(exception)
     respond_to do |format|
-      format.html { redirect_to(broadcasts_url(page: current_page)) }
+      format.json { head :no_content }
     end
   end
 end
