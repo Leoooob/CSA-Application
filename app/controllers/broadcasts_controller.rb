@@ -16,7 +16,7 @@ class BroadcastsController < ApplicationController
   # GET /broadcasts
   def index
     @broadcasts = Broadcast.paginate(page: params[:page],
-                                     per_page: params[:per_page])
+                                     per_page: PER_PAGE)
                            .order('created_at DESC')
   end
 

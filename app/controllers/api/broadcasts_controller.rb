@@ -11,12 +11,12 @@ class Api::BroadcastsController < Api::ApplicationController
   require 'date'
 
   # Default number of entries per page
-  PER_PAGE = 20
+  PER_PAGE = Broadcast.count
 
   # GET /broadcasts.json
   def index
     @broadcasts = Broadcast.paginate(page: params[:page],
-                                     per_page: params[:per_page])
+                                     per_page: PER_PAGE)
                            .order('created_at DESC')
   end
 
