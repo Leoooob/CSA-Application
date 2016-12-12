@@ -50,7 +50,7 @@ class Api::BroadcastsController < Api::ApplicationController
           format.json { render json: @broadcast, status: :created, location: @broadcast }
           
           current_time = DateTime.now
-          my_timestamp = current_time.strftime "%d/%m/%Y %H:%M"
+          my_timestamp = current_time.strftime "%Y-%m-%d %H:%M:%S UTC"
           
           ActionCable.server.broadcast 'display_channel',
             message: '<p><strong>Broadcast</strong>: ' + @broadcast.content.to_s + '<br/>',
