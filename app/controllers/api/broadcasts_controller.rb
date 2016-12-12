@@ -64,7 +64,6 @@ class Api::BroadcastsController < Api::ApplicationController
           ActionCable.server.broadcast 'display_channel',
             message: '<p>Broadcast: ' + @broadcast.content.to_s + '<br/>',
             time_stamp: '@ ' + my_timestamp + '</p>'
-
         else
           format.json {
             # Either say it partly worked but send back the errors or else send

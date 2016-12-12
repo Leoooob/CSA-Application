@@ -7,16 +7,24 @@ class Broadcast < ApplicationRecord
   belongs_to :user
   has_and_belongs_to_many :feeds
 
+  #def to_s
+  #  result = "id: " + id.to_s + " content: " + content
+  #  if user
+  #    result += " user: " + user.id.to_s
+  #  end
+  #  result
+  #end
+  
   def to_s
-    result = "id: " + id.to_s + " content: " + content
+    result = "Broadcast: " + content
     if user
-      result += " user: " + user.id.to_s
+      result += "sent by: " + user.id.to_s
     end
     result
   end
 
   def self.per_page
-    8
+    20
   end
 end
 
