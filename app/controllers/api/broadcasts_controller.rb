@@ -28,16 +28,7 @@ class Api::BroadcastsController < Api::ApplicationController
   # POST /broadcasts.json
   def create
     @broadcast = Broadcast.new(broadcast_params)
-
-    # Wire up broadcast with the current user (an administrator)
-    # Will be an admin user (see before_action)
-    # Note the current_user is a user_detail object so we need
-    # to navigate to its user object
     @broadcast.user = current_user.user
-
-    # Doing the next line forces a save automatically. I want to defer this
-    # until the "if" statement
-    #current_user.user.broadcasts << @broadcast
 
     no_errors = false
     respond_to do |format|
@@ -62,7 +53,7 @@ class Api::BroadcastsController < Api::ApplicationController
           my_timestamp = current_time.strftime "%d/%m/%Y %H:%M"
           
           ActionCable.server.broadcast 'display_channel',
-            message: '<p>Broadcast: ' + @broadcast.content.to_s + '<br/>',
+            message: '<p><strong>Broadcast</strong>: ' + @broadcast.content.to_s + '<br/>',
             time_stamp: '@ ' + my_timestamp + '</p>'
         else
           format.json {
