@@ -31,13 +31,16 @@ class UsersController < ApplicationController
   # Can be called either by an admin to show any user account or else by
   # a specific user to show their own account, but no one else's
   def index
-      @users = User.paginate(page: params[:page],
+    @users = User.paginate(page: params[:page],
                              per_page: params[:per_page])
                    .order('surname, firstname')
+    @broadcasts = Broadcast.order('created_at DESC')
   end
 
   # GET /users/1
   def show
+    @broadcasts = Broadcast.order('created_at DESC')
+    
     if current_user.id == @user.id || is_admin?
       respond_to do |format|
         # If an Ajax request then send back a partial to include just

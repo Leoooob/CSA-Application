@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   after_action :store_location, only: [:index, :new, :show, :edit, :search]
 
   protected
-
+  
   def login_required
     logged_in? || access_denied
   end
