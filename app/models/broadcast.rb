@@ -22,9 +22,5 @@ class Broadcast < ApplicationRecord
     end
     result
   end
-
-  #def self.per_page
-  #  20
-  #end
 end
 
