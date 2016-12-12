@@ -10,6 +10,9 @@ class NewsBroadcast < ApplicationMailer
 end
 
 ##############################################
+#Below is my working code for SendGrid, which is a Heroku addon to send automated emails.
+#I haven't used it in my final submission because I didn't want to spam university email addresses
+#or deal with failed sendings etc, spoofing them as above is good enough for me!
 
 ##class NewsBroadcast < ApplicationMailer
 #  require 'sendgrid-ruby'
