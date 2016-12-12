@@ -31,7 +31,16 @@
 
   <div class="side-pane">
     <h2>Live Broadcast feed</h2>
-    <div id="messages"></div>
+    <div id="messages">
+      <% if @broadcasts.length > 0 %>
+        <% @broadcasts.first(20).each do |broadcast| %>
+          <!-- <p><strong>Broadcast</strong>: BROADCAST.content <br/> @ BROADCAST.time-->
+        <p>
+          <strong>Broadcast</strong>: <%= broadcast.content %> <br/> @ <%= broadcast.created_at %>
+        </p>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
